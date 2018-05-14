@@ -1,0 +1,13 @@
+language: java 
+install: mvn clean install
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+branches:
+  only:
+    - master
+    - dev
+
+cache:
+  directories:
+  - $HOME/.m2
